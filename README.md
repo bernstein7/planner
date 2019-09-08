@@ -20,7 +20,7 @@ BusyTimeSlot.display_schedule(0)
 0 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
 ```
 
-### Next week I plan working form 11:00 to 19:00 and alrady have 3 accepted jobs
+### Next week I plan working form 11:00 to 19:00 and already have 3 accepted jobs
 
 ```ruby
 BusyTimeSlot.display_schedule(1)
