@@ -1,24 +1,49 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ `rake db:setup`
+ 
+# Test
 
-Things you may want to cover:
+`BusyTimeSlot.display_schedule` accepts number of weeks from now
+ 
+### This week I work form 10:00 to 18:00
 
-* Ruby version
+```ruby
+BusyTimeSlot.display_schedule(0)
 
-* System dependencies
+1 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+2 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+3 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+4 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+5 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+6 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+0 =>|00:00:00 - 10:00:00||18:00:00 - 23:59:59|
+```
 
-* Configuration
+### Next week I plan working form 11:00 to 19:00 and alrady have 3 accepted jobs
 
-* Database creation
+```ruby
+BusyTimeSlot.display_schedule(1)
 
-* Database initialization
+1 =>|00:00:00 - 11:00:00||11:00:00 - 15:00:00||19:00:00 - 23:59:59|
+2 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+3 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+4 =>|00:00:00 - 11:00:00||11:00:00 - 15:00:00||19:00:00 - 23:59:59|
+5 =>|00:00:00 - 11:00:00||15:00:00 - 19:00:00||19:00:00 - 23:59:59|
+6 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+0 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+```
 
-* How to run the test suite
+### My estimated work plans next month
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+BusyTimeSlot.display_schedule(4)
 
-* Deployment instructions
-
-* ...
+1 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+2 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+3 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+4 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+5 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+6 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+0 =>|00:00:00 - 11:00:00||19:00:00 - 23:59:59|
+```
