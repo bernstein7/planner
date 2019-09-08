@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  s: MyString
+  from: 2019-09-06 18:30:03
+  to: 2019-09-06 18:30:03
+  recurring: false
+
+two:
+  s: MyString
+  from: 2019-09-06 18:30:03
+  to: 2019-09-06 18:30:03
+  recurring: false
